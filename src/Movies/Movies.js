@@ -10,6 +10,8 @@ const Movies = ({ movieData, selectPoster }) => {
         key={movie.id}
         poster={movie.poster_path}
         title={movie.title}
+        rating={movie.average_rating}
+        releaseDate={movie.release_date}
         selectPoster={selectPoster}
       />
     );
