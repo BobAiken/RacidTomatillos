@@ -3,20 +3,34 @@ import "./Individual.css";
 
 const Individual = ({ individualInfo, goHome }) => {
   return (
-    <div>
-      Hello
-      <p>{individualInfo.title}</p>
-      <img src={individualInfo.poster_path}></img>
-      <img src={individualInfo.backdrop_path}></img>
-      <p>{individualInfo.release_date}</p>
-      <p>{individualInfo.overview}</p>
-      <p>{individualInfo.average_rating}</p>
-      <p>{individualInfo.genres}</p>
-      <p>{individualInfo.budget}</p>
-      <p>{individualInfo.revenew}</p>
-      <p>{individualInfo.runtime}</p>
-      <p>{individualInfo.tagline}</p>
-      <button onClick={() => goHome()}>GO BACK HOME</button>
+    <div
+      className="backdrop"
+      style={{ backgroundImage: `url(${individualInfo.backdrop_path})` }}
+    >
+      <div className="information">
+        <h3>{individualInfo.title}</h3>
+        <p>{individualInfo.tagline}</p>
+        <p>{individualInfo.overview}</p>
+        <p>Release Date: {individualInfo.release_date}</p>
+        <p>Average Rating: {individualInfo.average_rating}/10</p>
+        <p>Genres: {individualInfo.genres.join(", ")}</p>
+        <p>
+          Budget:{" "}
+          {individualInfo.budget.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+          })}
+        </p>
+        <p>
+          Revenue:{" "}
+          {individualInfo.revenue.toLocaleString("en-US", {
+            style: "currency",
+            currency: "USD",
+          })}
+        </p>
+        <p>Runtime: {individualInfo.runtime} minutes</p>
+        <button onClick={() => goHome()}>GO BACK HOME</button>
+      </div>
     </div>
   );
 };
