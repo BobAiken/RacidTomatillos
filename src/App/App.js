@@ -53,7 +53,6 @@ class App extends Component {
   render() {
     return (
       <main>
-        <h1>Rancid Tomatillos</h1>
         <div>{this.state.error}</div>
         {this.state.individual ? (
           <Individual
@@ -61,10 +60,13 @@ class App extends Component {
             goHome={this.goHome}
           />
         ) : (
-          <Movies
-            movieData={this.state.movies}
-            selectPoster={this.selectPoster}
-          />
+          <>
+            <h1>Rancid Tomatillos</h1>
+            <Movies
+              movieData={this.state.movies}
+              selectPoster={this.selectPoster}
+            />
+          </>
         )}
       </main>
     );
