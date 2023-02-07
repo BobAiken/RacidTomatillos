@@ -2,7 +2,7 @@ import React from "react";
 import Poster from "../Poster/Poster";
 import "./Movies.css";
 
-const Movies = ({ movieData, selectPoster }) => {
+const Movies = ({ movieData }) => {
   const moviePosters = movieData.map((movie) => {
     return (
       <Poster
@@ -12,12 +12,16 @@ const Movies = ({ movieData, selectPoster }) => {
         title={movie.title}
         rating={movie.average_rating}
         releaseDate={movie.release_date}
-        selectPoster={selectPoster}
       />
     );
   });
 
-  return <div className="posters-container">{moviePosters}</div>;
+  return (
+    <>
+      <h1>Rancid Tomatillos</h1>
+      <div className="posters-container">{moviePosters}</div>
+    </>
+    )
 };
 
 export default Movies;
