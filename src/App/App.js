@@ -1,19 +1,17 @@
 import React, { Component } from "react";
-import movieData from "../movieData/movieData";
 import "./App.css";
 import Movies from "../Movies/Movies";
 import Individual from "../Individual/Individual";
-import { fetchMovies, fetchIndividual } from "../apiCalls";
+import { fetchMovies } from "../apiCalls";
+import { Route } from 'react-router-dom';
 
 let moviesList;
-let movieIndiv;
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
       movies: [],
-      individual: "",
       error: "",
     };
   }
@@ -32,44 +30,18 @@ class App extends Component {
       });
   }
 
-  selectPoster = (id) => {
-    fetchIndividual(id)
-      .catch((error) => {
-        console.error(error.message);
-        this.setState({ error: error.message });
-      })
-      .then((data) => {
-        movieIndiv = data;
-      })
-      .then(() => {
-        this.setState({ individual: movieIndiv.movie });
-      });
-  };
-
-  goHome = () => {
-    this.setState({ individual: "" });
-  };
-
   render() {
-    return (
+    return(
       <main>
         <div>{this.state.error}</div>
-        {this.state.individual ? (
-          <Individual
-            individualInfo={this.state.individual}
-            goHome={this.goHome}
+        <Route exact path="/" render={() => <Movies movieData={this.state.movies}/>}/>
+        <Route 
+        exact path="/:id" 
+        render={({match}) => {
+          return <Individual id={match.params.id}/>}}
           />
-        ) : (
-          <>
-            <h1>Rancid Tomatillos</h1>
-            <Movies
-              movieData={this.state.movies}
-              selectPoster={this.selectPoster}
-            />
-          </>
-        )}
       </main>
-    );
+    )
   }
 }
 
