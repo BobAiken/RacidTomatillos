@@ -59,7 +59,7 @@ let movieIndiv;
               })}
             </p>
             <p>Runtime: {this.state.individual.runtime} minutes</p>
-            <Link to="/">
+            <Link to="/RacidTomatillos/">
             <button >GO BACK HOME</button>
             </Link>
           </div>
