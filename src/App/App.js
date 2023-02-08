@@ -34,7 +34,7 @@ class App extends Component {
     return(
       <main>
         <div>{this.state.error}</div>
-        <Route exact path="/" render={() => <Movies movieData={this.state.movies}/>}/>
+        <Route exact path="/" render={() => <Movies movieData={this.state.movies} />}/>
         <Route 
         exact path="/:id" 
         render={({match}) => {
