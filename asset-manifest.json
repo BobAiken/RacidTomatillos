@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/BobAiken/RacidTomatillos/static/css/main.51cce613.css",
+    "main.js": "/BobAiken/RacidTomatillos/static/js/main.b631e583.js",
+    "static/js/787.55352625.chunk.js": "/BobAiken/RacidTomatillos/static/js/787.55352625.chunk.js",
+    "index.html": "/BobAiken/RacidTomatillos/index.html",
+    "main.51cce613.css.map": "/BobAiken/RacidTomatillos/static/css/main.51cce613.css.map",
+    "main.b631e583.js.map": "/BobAiken/RacidTomatillos/static/js/main.b631e583.js.map",
+    "787.55352625.chunk.js.map": "/BobAiken/RacidTomatillos/static/js/787.55352625.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.51cce613.css",
+    "static/js/main.b631e583.js"
+  ]
+}
