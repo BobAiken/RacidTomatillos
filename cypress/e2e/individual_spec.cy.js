@@ -18,5 +18,5 @@ describe('Individual view flows', () => {
         .get('button').click()
         .get('h1')
     })
-
+    
 })
