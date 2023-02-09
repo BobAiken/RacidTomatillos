@@ -2,7 +2,7 @@ import React from "react";
 import Poster from "../Poster/Poster";
 import "./Movies.css";
 
-const Movies = ({ movieData }) => {
+const Movies = ({ movieData, error }) => {
   const moviePosters = movieData.map((movie) => {
     return (
       <Poster
@@ -19,6 +19,7 @@ const Movies = ({ movieData }) => {
   return (
     <>
       <h1>Rancid Tomatillos</h1>
+      <div className="error">{error}</div>
       <div className="posters-container">{moviePosters}</div>
     </>
     )
