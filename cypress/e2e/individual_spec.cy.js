@@ -1,6 +1,7 @@
 describe('Individual view flows', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3000');
+      cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies/436270', {fixture: "individualMovie.json"})
+      cy.visit('http://localhost:3000/RacidTomatillos');
       });
     it('Should confirm that true is equal to true', () => {
         expect(true).to.equal(true)

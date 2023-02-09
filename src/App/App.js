@@ -2,8 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import Movies from "../Movies/Movies";
 import Individual from "../Individual/Individual";
+import Error from "../Error/Error"
 import { fetchMovies } from "../apiCalls";
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 let moviesList;
 
@@ -33,13 +34,16 @@ class App extends Component {
   render() {
     return(
       <main>
-        <div>{this.state.error}</div>
-        <Route exact path="/RacidTomatillos/" render={() => <Movies movieData={this.state.movies} />}/>
-        <Route 
-        exact path="/RacidTomatillos/:id" 
-        render={({match}) => {
-          return <Individual id={match.params.id}/>}}
-          />
+        <Switch>
+          {/* <div>{this.state.error}</div> */}
+          <Route exact path="/RacidTomatillos/" render={() => <Movies movieData={this.state.movies} error={this.state.error}/>}/>
+          <Route 
+          exact path="/RacidTomatillos/:id" 
+          render={({match}) => {
+            return <Individual id={match.params.id}/>}}
+            />
+          <Route path="*" render={()=> <Error/>}/>
+        </Switch>
       </main>
     )
   }

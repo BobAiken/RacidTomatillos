@@ -31,12 +31,13 @@ let movieIndiv;
     }
 
     render () {
-      return(
-        <>
-        {this.state.individual ? ( <div
+       let whatToRender;
+       if(this.state.individual){
+        whatToRender = 
+          <div
           className="backdrop"
           style={{ backgroundImage: `url(${this.state.individual.backdrop_path})` }}
-        >
+          >
           <div className="information">
             <h3>{this.state.individual.title}</h3>
             <p>{this.state.individual.tagline}</p>
@@ -46,28 +47,40 @@ let movieIndiv;
             <p>Genres: {this.state.individual.genres.join(", ")}</p>
             <p>
               Budget:{" "}
-              {this.state.individual.budget.toLocaleString("en-US", {
-                style: "currency",
-                currency: "USD",
-              })}
+                {this.state.individual.budget.toLocaleString("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                  }
+                )
+              }
             </p>
             <p>
               Revenue:{" "}
-              {this.state.individual.revenue.toLocaleString("en-US", {
-                style: "currency",
-                currency: "USD",
-              })}
+                {this.state.individual.revenue.toLocaleString("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                  }
+                )
+              }
             </p>
             <p>Runtime: {this.state.individual.runtime} minutes</p>
             <Link to="/RacidTomatillos/">
-            <button >GO BACK HOME</button>
+              <button >GO BACK HOME</button>
             </Link>
           </div>
-        </div>) : (<p>Loading...</p>)} 
+        </div>
+      } else if (this.state.error) {
+        whatToRender = <p className="Error">{this.state.error}</p>
+      } else {
+        whatToRender = <p>Loading...</p>
+      }
+
+      return(
+        <>
+        {whatToRender}
         </>
       )
     }
-
 }
 
 export default Individual;
