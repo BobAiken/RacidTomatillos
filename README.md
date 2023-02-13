@@ -33,8 +33,8 @@ Rancid Tomatillos was a partner project that was assigned in Mod3 of Turing Scho
 - Run `npm start` in to start the local server.
 - To stop the local server from running in your terminal use `command + c`.
 
-##App Demo
-#Here is a short video demonstrating our application
+## App Demo
+# Here is a short video demonstrating our application
 https://www.loom.com/share/55624a1c7e67440d890a8e147562d4ee
 
 ### Wins
