@@ -23,9 +23,8 @@ Rancid Tomatillos was a partner project that was assigned in Mod3 of Turing Scho
 - Cypress Testing
 - Fetch API
 - GitHub project board
-- ARIA
-- WAVE Evaluation Tool
-- Google Lighthouse
+- Routing
+
 
 ## Installation Instructions:
 ### Run the local server
