@@ -1,3 +1,39 @@
+# Rancid Tomatillos!
+
+## Overview of Project 
+### Description
+Rancid Tomatillos was a partner project that was assigned in Mod3 of Turing School of Software and Design's Front-End Engineering bootcamp. The students for this project were challanged to create an application that displays a list of movies which once selected it will display all that movies details. We built this whole application with react and tested all of our information with cypress testing. We also used routing to change our URL when a link is clicked.
+
+
+
+### Goals
+- Implement ES6 classes that communicate to each other as needed.
+- Implement react methods throughout the whole application. 
+- Use object and array prototype methods to perform data manipulation.
+- Create a dashboard that is easy to use and displays information in a clear way.
+- Write modular, reusable code that follows SRP (Single Responsibility Principle).
+- Implement a robust testing suite using Cypress testing.
+- Make network requests to retrieve data.
+- Work with a local server and make network requests to API endpoints to retrieve and manipulate data.
+- Using the local server and changing the URL name depending on the page we are on.
+- Implement best practices for accessibility
+
+## Technologies Used:
+- HTML, CSS, Javascript, and React
+- Cypress Testing
+- Fetch API
+- GitHub project board
+- ARIA
+- WAVE Evaluation Tool
+- Google Lighthouse
+
+## Installation Instructions:
+### Run the local server
+- In your terminal, clone 'git@github.com:turingschool-examples/fitlit-api.git' and CD into the directory.
+- Run `npm install` to install project dependencies.
+- Run `npm start` in to start the local server.
+- To stop the local server from running in your terminal use `command + c`.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
