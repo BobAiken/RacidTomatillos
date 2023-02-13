@@ -34,6 +34,12 @@ Rancid Tomatillos was a partner project that was assigned in Mod3 of Turing Scho
 - Run `npm start` in to start the local server.
 - To stop the local server from running in your terminal use `command + c`.
 
+### Wins
+- Using class and function components
+- Completion of all Cypress testing
+- Correctly using routing method
+- Adding Deployment to our application
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
