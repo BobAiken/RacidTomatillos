@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/RacidTomatillos/static/css/main.51cce613.css",
-    "main.js": "/RacidTomatillos/static/js/main.fb468a4b.js",
+    "main.css": "/RacidTomatillos/static/css/main.97086be5.css",
+    "main.js": "/RacidTomatillos/static/js/main.a468d3a2.js",
     "static/js/787.55352625.chunk.js": "/RacidTomatillos/static/js/787.55352625.chunk.js",
     "index.html": "/RacidTomatillos/index.html",
-    "main.51cce613.css.map": "/RacidTomatillos/static/css/main.51cce613.css.map",
-    "main.fb468a4b.js.map": "/RacidTomatillos/static/js/main.fb468a4b.js.map",
+    "main.97086be5.css.map": "/RacidTomatillos/static/css/main.97086be5.css.map",
+    "main.a468d3a2.js.map": "/RacidTomatillos/static/js/main.a468d3a2.js.map",
     "787.55352625.chunk.js.map": "/RacidTomatillos/static/js/787.55352625.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.51cce613.css",
-    "static/js/main.fb468a4b.js"
+    "static/css/main.97086be5.css",
+    "static/js/main.a468d3a2.js"
   ]
 }
